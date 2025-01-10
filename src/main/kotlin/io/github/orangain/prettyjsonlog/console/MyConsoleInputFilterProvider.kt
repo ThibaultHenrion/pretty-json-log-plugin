@@ -57,7 +57,7 @@ class MyConsoleInputFilter(
 
         val jsonString = prettyPrintJson(node)
         return mutableListOf(
-            Pair("[${timestamp?.format(zoneId, timestampFormatter)}] ", contentType),
+            Pair("${timestamp?.format(zoneId, timestampFormatter)} -> ", contentType),
             Pair(coloredMessage, contentTypeOf(level, contentType)),
             Pair(
                 " \n$jsonString$suffixWhitespaces", // Adding a space at the end of line makes a folding marker look better.
